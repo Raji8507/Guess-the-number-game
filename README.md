@@ -19,3 +19,6 @@ A beginner-friendly number guessing game made with just HTML, CSS, and JavaScrip
 2. Click on the **Check** button.
 3. The game tells you if you're right or wrong.
 4. Your score decreases with each wrong guess.
+
+## 🌐 Live Demo
+https://raji8507.github.io/Guess-the-number-game/
