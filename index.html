@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number game</title>
+ </head>
+ <body class="home">
+    <div class="box">
+        <center><h1>Guess the number</h1></center>
+        <p>Guess the number between 1 and 10</p>
+        <input id="input">
+        <button onclick="check()">Check</button>
+        <p id="result">You are right/wrong</p>
+        <p id="score">Score: 10</p>
+    </div>
+
+    <style>
+        .box{
+            border: 1px solid gray;
+            margin: 200px 550px;
+            padding: 20px;
+            width: 370px;
+            border-radius: 14px;
+            background-color: rgb(98, 219, 213);
+            border: none;
+        }
+        .home{
+            font-family: sans-serif;
+            background : url(https://images.unsplash.com/photo-1707138366638-81413ca51056?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+        
+        #input{
+            width: 70%;
+        }
+    </style>
+    
+    <script>
+        var input=document.getElementById("input")
+        var result=document.getElementById("result")
+        var score=document.getElementById("score")
+        var random=Math.floor(Math.random()*10)+1
+        var totalscore=10
+        function check(){
+            var num=input.value
+            if (num == random){
+                result.textContent="Yor are right!"
+                alert("You won")
+            }
+            else{
+                result.textContent="Yor are wrong!"
+                totalscore=totalscore-1
+                score.textContent="Score: "+totalscore
+            }
+        }
+    </script>
+ </body>
+ </html>
